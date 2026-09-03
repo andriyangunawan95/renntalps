@@ -1,0 +1,423 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0f17;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+}
+
+
+/* HERO */
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 35px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        #151c2c,
+        #252e45
+    );
+    border: 1px solid #303b55;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #b9c0ce;
+    font-size: 16px;
+}
+
+.language-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 9px 13px;
+
+    background: #30394d;
+    color: white;
+
+    cursor: pointer;
+}
+
+.language-btn:hover {
+    background: #00d9ff;
+    color: #061018;
+}
+
+
+/* CARD */
+
+.card {
+    background: #151a25;
+    border: 1px solid #293244;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 17px;
+}
+
+
+/* PS */
+
+.ps-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.ps-card {
+    text-align: center;
+    padding: 22px 15px;
+
+    background: #202735;
+
+    border: 2px solid transparent;
+    border-radius: 15px;
+
+    transition: 0.2s;
+}
+
+.ps-card.selected {
+    border-color: #00e5ff;
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.2);
+}
+
+.ps-card .icon {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.ps-card h3 {
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.ps-card p {
+    color: #00e5ff;
+    margin-bottom: 15px;
+}
+
+
+/* BUTTON */
+
+.btn {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+
+    padding: 13px;
+
+    font-weight: bold;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.pilih-btn {
+    background: #00e5ff;
+    color: #001016;
+}
+
+
+/* SELECTED */
+
+.selected-info {
+    margin-top: 15px;
+    padding: 12px;
+
+    background: #0d121c;
+    border-radius: 10px;
+
+    color: #b9c0ce;
+}
+
+.selected-info strong {
+    color: #00e5ff;
+}
+
+
+/* MEJA */
+
+.meja-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 10px;
+}
+
+.meja-btn {
+    padding: 12px 5px;
+
+    border: 1px solid #39445a;
+
+    border-radius: 9px;
+
+    background: #202735;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.meja-btn:hover {
+    background: #303b50;
+}
+
+.meja-btn.selected {
+    background: #00e5ff;
+    color: #001016;
+    border-color: #00e5ff;
+}
+
+
+/* DURASI */
+
+.duration-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.duration-btn {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #00e5ff;
+    color: #001016;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.duration-btn:hover {
+    opacity: 0.85;
+}
+
+#durasi {
+    min-width: 120px;
+
+    text-align: center;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    padding: 12px;
+
+    background: #0d121c;
+    border-radius: 10px;
+}
+
+
+/* FORM */
+
+label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 7px;
+
+    color: #dce1ea;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    background: #0d121c;
+
+    color: white;
+
+    border: 1px solid #39445a;
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #00e5ff;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+
+/* SUMMARY */
+
+.summary {
+    margin-top: 20px;
+
+    padding: 18px;
+
+    background: #0d121c;
+
+    border-radius: 13px;
+}
+
+.summary h2 {
+    margin-bottom: 12px;
+}
+
+.summary p {
+    line-height: 1.9;
+    color: #c5cbd6;
+}
+
+.summary strong {
+    color: white;
+}
+
+.summary hr {
+    border: none;
+    border-top: 1px solid #30394b;
+    margin: 12px 0;
+}
+
+.total {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.total span {
+    color: #00e5ff;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp-btn {
+    margin-top: 18px;
+
+    background: #25d366;
+    color: white;
+
+    font-size: 17px;
+}
+
+
+/* RESET */
+
+.reset-btn {
+    margin-top: 10px;
+
+    background: #343d50;
+    color: white;
+}
+
+
+/* WEBSITE */
+
+.website-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.website-btn {
+    text-align: center;
+
+    text-decoration: none;
+
+    padding: 13px;
+
+    background: #242c3c;
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+.website-btn:hover {
+    background: #00e5ff;
+    color: #001016;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    color: #777f8f;
+
+    padding: 20px;
+}
+
+
+/* HP */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .ps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .meja-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .website-buttons {
+        grid-template-columns: 1fr;
+    }
+
+}

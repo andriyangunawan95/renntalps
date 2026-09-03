@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental PS3 & PS4</title>
+
+    <link rel="stylesheet" href="rentalps1.css">
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header class="hero">
+        <button type="button" id="btnBahasa" class="language-btn">
+            🇮🇩 ID
+        </button>
+
+        <h1 id="judul">
+            🎮 Rental PS3 & PS4
+        </h1>
+
+        <p id="subjudul">
+            Main lebih seru, pilih PS dan meja favoritmu!
+        </p>
+    </header>
+
+
+    <!-- PILIH PS -->
+    <section class="card">
+
+        <h2>🎮 Pilih PlayStation</h2>
+
+        <div class="ps-container">
+
+            <div class="ps-card" id="cardPS3">
+
+                <div class="icon">🎮</div>
+
+                <h3>PS3</h3>
+
+                <p>Rp6.000 / Jam</p>
+
+                <button
+                    type="button"
+                    id="btnPS3"
+                    class="btn pilih-btn">
+                    Pilih PS3
+                </button>
+
+            </div>
+
+
+            <div class="ps-card" id="cardPS4">
+
+                <div class="icon">🎮</div>
+
+                <h3>PS4</h3>
+
+                <p>Rp9.000 / Jam</p>
+
+                <button
+                    type="button"
+                    id="btnPS4"
+                    class="btn pilih-btn">
+                    Pilih PS4
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="selected-info">
+            PS Dipilih:
+            <strong id="psTerpilih">
+                Belum dipilih
+            </strong>
+        </div>
+
+    </section>
+
+
+    <!-- PILIH MEJA -->
+    <section class="card">
+
+        <h2>🪑 Pilih Nomor Meja</h2>
+
+        <div id="mejaContainer" class="meja-container">
+
+            <button type="button" class="meja-btn" data-meja="1">
+                Meja 1
+            </button>
+
+            <button type="button" class="meja-btn" data-meja="2">
+                Meja 2
+            </button>
+
+            <button type="button" class="meja-btn" data-meja="3">
+                Meja 3
+            </button>
+
+            <button type="button" class="meja-btn" data-meja="4">
+                Meja 4
+            </button>
+
+            <button type="button" class="meja-btn" data-meja="5">
+                Meja 5
+            </button>
+
+            <button type="button" class="meja-btn" data-meja="6">
+                Meja 6
+            </button>
+
+            <button type="button" class="meja-btn" data-meja="7">
+                Meja 7
+            </button>
+
+            <button type="button" class="meja-btn" data-meja="8">
+                Meja 8
+            </button>
+
+            <button type="button" class="meja-btn" data-meja="9">
+                Meja 9
+            </button>
+
+            <button type="button" class="meja-btn" data-meja="10">
+                Meja 10
+            </button>
+
+        </div>
+
+        <div class="selected-info">
+            Meja Dipilih:
+            <strong id="mejaTerpilih">
+                Belum dipilih
+            </strong>
+        </div>
+
+    </section>
+
+
+    <!-- DURASI -->
+    <section class="card">
+
+        <h2>⏱️ Durasi Bermain</h2>
+
+        <div class="duration-control">
+
+            <button
+                type="button"
+                id="btnKurang"
+                class="duration-btn">
+                −
+            </button>
+
+            <div id="durasi">
+                1 Jam
+            </div>
+
+            <button
+                type="button"
+                id="btnTambah"
+                class="duration-btn">
+                +
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DATA PEMESAN -->
+    <section class="card">
+
+        <h2>👤 Data Pemesan</h2>
+
+        <form id="formRental">
+
+            <label for="nama">
+                Nama Lengkap
+            </label>
+
+            <input
+                type="text"
+                id="nama"
+                placeholder="Masukkan nama lengkap"
+                required>
+
+
+            <label for="whatsapp">
+                Nomor WhatsApp
+            </label>
+
+            <input
+                type="tel"
+                id="whatsapp"
+                placeholder="08xxxxxxxxxx"
+                required>
+
+
+            <label for="jamMulai">
+                🕐 Jam Mulai
+            </label>
+
+            <input
+                type="time"
+                id="jamMulai"
+                required>
+
+
+            <label for="catatan">
+                📝 Catatan
+            </label>
+
+            <textarea
+                id="catatan"
+                placeholder="Tambahkan catatan jika ada...">
+            </textarea>
+
+
+            <!-- RINGKASAN -->
+            <div class="summary">
+
+                <h2>📋 Ringkasan Pesanan</h2>
+
+                <p>
+                    🎮 PS:
+                    <strong id="summaryPS">
+                        Belum dipilih
+                    </strong>
+                </p>
+
+                <p>
+                    🪑 Meja:
+                    <strong id="summaryMeja">
+                        Belum dipilih
+                    </strong>
+                </p>
+
+                <p>
+                    ⏱️ Durasi:
+                    <strong id="summaryDurasi">
+                        1 Jam
+                    </strong>
+                </p>
+
+                <p>
+                    💵 Harga / Jam:
+                    <strong id="summaryHarga">
+                        Rp0
+                    </strong>
+                </p>
+
+                <hr>
+
+                <div class="total">
+                    Total:
+                    <span id="totalHarga">
+                        Rp0
+                    </span>
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                id="btnPesan"
+                class="btn whatsapp-btn">
+                📱 Pesan Lewat WhatsApp
+            </button>
+
+
+            <button
+                type="button"
+                id="btnReset"
+                class="btn reset-btn">
+                🔄 Reset Pesanan
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- WEBSITE LAIN -->
+    <section class="card">
+
+        <h2>🌐 Website Lain</h2>
+
+        <div class="website-buttons">
+
+            <a
+                href="https://andriyangunawan95.github.io/tokokita/bioskopmini.html#home"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="website-btn">
+                🌐 Bioskop Mini
+            </a>
+
+            <a
+                href="https://andriyangunawan95.github.io/makanan/makanan.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="website-btn">
+                🌐 Pesan Makanan
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        © 2026 Rental PS3 & PS4
+    </footer>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="rentalps1.js"></script>
+
+</body>
+</html>
